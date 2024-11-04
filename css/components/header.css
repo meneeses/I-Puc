@@ -1,0 +1,208 @@
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+
+:root {
+  --font-size-base: 10px;
+  --bg-color: rgba(0, 0, 0, 0.8);
+  --btn-bg-color: #165bd0;
+  --btn-hover-bg-color: #3e6dbb;
+  --white: #fff;
+  --transition-base: 0.5s;
+  --font-family-base: "SF Pro Display", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 98rem;
+  margin: 0 auto;
+  padding: 0 2.2rem;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1400;
+  width: 100%;
+  height: 4.4rem;
+  background-color: var(--bg-color);
+  backdrop-filter: blur(2rem);
+  transition: height 0.56s cubic-bezier(0.32, 0.08, 0.24, 1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.login-button {
+  background-color: var(--btn-bg-color);
+  color: var(--white);
+  padding: 0.8rem 1.6rem;
+  border-radius: 10rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+}
+
+.login-button:hover {
+  background-color: var(--btn-hover-bg-color);
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 -1rem;
+}
+
+.nav-list-mobile {
+  display: none;
+}
+
+.nav-link {
+  font-size: 1.4rem;
+  color: var(--white);
+  padding: 0 1rem;
+  transition: opacity var(--transition-base);
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+.nav-link-ipuc {
+  font-size: 1.6rem;
+  height: 4.4rem;
+  width: 2rem;
+  background: url("/images/icons/apple.svg") no-repeat center;
+  background-size: contain;
+  margin-right: 0.5rem;
+}
+
+.text-logo {
+  font-size: 1.8rem;
+  color: var(--white);
+}
+
+.nav-link-search,
+.nav-link-bag {
+  font-size: 1.6rem;
+  height: 4.4rem;
+  background-size: contain;
+}
+
+.nav-link-search {
+  background: url("/images/icons/search.svg") no-repeat center;
+}
+
+.nav-link-bag {
+  background: url("/images/icons/bag.svg") no-repeat center;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+
+  header {
+    height: 4.8rem;
+    transition: background 0.36s cubic-bezier(0.32, 0.08, 0.24, 1),
+                height 0.56s cubic-bezier(0.32, 0.08, 0.24, 1);
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .nav-list-larger {
+    display: none;
+  }
+
+  .nav-list {
+    margin-top: 0;
+  }
+
+  .nav-list-mobile {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 4.8rem;
+    height: 4.8rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-item-hidden {
+    display: none;
+  }
+
+  .mobile-menu {
+    position: relative;
+    z-index: 1500;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .line {
+    position: absolute;
+    width: 1.7rem;
+    height: 1px;
+    background-color: var(--white);
+    transition: margin-top 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+  }
+
+  .line-top {
+    margin-top: 10px;
+  }
+
+  .line-bottom {
+    margin-top: -0.1rem;
+  }
+
+  .active .line-top {
+    margin-top: 0;
+    transform: rotate(45deg);
+    transition: transform 0.3192s 0.1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+  }
+
+  .active .line-bottom {
+    margin-top: 0;
+    transform: rotate(-45deg);
+    transition: transform 0.3192s 0.1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+  }
+
+    header.active {
+    height: 100%;
+    background-color: #000 !important;
+  }
+}
