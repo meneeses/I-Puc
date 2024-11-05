@@ -157,7 +157,7 @@ header {
     justify-content: center;
   }
 
-  .nav-item-hidden {
+  .nav-item .nav-link.nav-link-bag {
     display: none;
   }
 
@@ -201,8 +201,136 @@ header {
     transition: transform 0.3192s 0.1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
   }
 
-    header.active {
+    header.expanded {
     height: 100%;
-    background-color: #000 !important;
+  }
+
+  .nav-link-apple {
+    width: 1.8rem;
+    height: 4.8rem;
+    position: relative;
+    z-index: 1500;
+  }
+
+  .nav-link-bag {
+    width: 1.6rem;
+    height: 4.8rem;
+    transition: opacity .3s;
+  }
+
+  .nav {
+    position: relative;
+  }
+
+  .nav-link {
+    font-size: 1.7rem;
+    padding: 0;
+    margin: auto 0;
+  }
+
+  .nav-link.text-logo {
+    display: none;
+  }
+
+  .nav-list-larger .nav-link-ipuc {
+    display: none;
+  }
+
+  .nav-list-larger {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    width: 100%;
+    padding: 0;
+    z-index: 1200;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+  }
+
+  .expanded .nav-list-larger {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-item.menu {
+    width: auto;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-item.menu .nav-link.nav-link-bag {
+    display: none;
+  }
+
+  .nav-link {
+    font-size: 2rem;
+    padding: 1rem 3rem;
+    color: var(--white);
+  }
+
+  .login-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: auto;
+  }
+
+  .login-container .nav-item {
+    list-style: none;
+  }
+
+  .nav-link {
+    font-size: 1.6rem;
+    padding: 1.1rem 3rem;
+    color: var(--white);
+    text-align: center;
+    background-color: transparent;
+    border-radius: 10rem;
+  }
+
+  .login-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+  }
+
+  .login-container .nav-item {
+    list-style: none;
+  }
+
+  .nav-item .nav-link {
+    white-space: nowrap
+  }
+
+  .login-button {
+    font-size: 1.6rem;
+    padding: 1rem 2.5rem;
+    border-radius: 10rem;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .active .nav-list-larger .nav-item {
+    animation: fadeIn 1s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+    
   }
 }
