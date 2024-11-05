@@ -163,8 +163,13 @@
 }
 
 /* Preço */
-.price {
+.price, .preco {
   font-size: 16px;
   color: #555;
   margin-top: 5px;
+}
+.preco {
+  font-size: 16px;
+  color: #555;
+  margin-top: 26px;
 }
