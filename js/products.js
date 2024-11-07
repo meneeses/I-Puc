@@ -6,3 +6,8 @@ document.querySelector('.next-btn').addEventListener('click', () => {
     const offset = -currentIndex * 100; 
     carouselContent.style.transform = `translateX(${offset}%)`;
 });
+function scrollRight() {
+  const carousel = document.getElementById("carousel");
+  carousel.scrollBy({ left: 300, behavior: "smooth" });
+}
+

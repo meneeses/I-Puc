@@ -23,91 +23,23 @@ margin-bottom: 20px;
 }
 .valor {
  position: relative;
- bottom: 0px;
+ bottom: 7px;
 }
-.carousel {
+.prijs {
   position: relative;
-  width: 80%;
-  max-width: 600px;
-  margin: 0 auto;
-  overflow: hidden;
+  bottom: 8px;
 }
-
-.carousel-content {
-  display: flex;
-  transition: transform 0.5s ease;
+.price {
+  position: relative;
+  top: 20px;
 }
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 10px;
-  width: 40px;
-  height: 40px;
-  border: 1px solid #ccc;
-  background-color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease;
+.airpods {
+  max-width: 100%;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
-
-.carousel-btn:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+.airpods-max {
+  max-width: 100%;
+  margin-top: 70px;
+  margin-bottom: 10px;
 }
-
-.carousel-btn span {
-  font-size: 18px;
-  color: #333;
-}
-
-
-.carousel-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px; /* Espaço entre os cartões e o botão */
-}
-
-.iphone-cards {
-    display: flex;
-    gap: 20px; /* Espaço entre os cards */
-}
-
-.card {
-    background: rgba(255, 255, 255, 0.9);
-    width: 200px; /* Ajuste conforme necessário */
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.carousel-btn {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    background-color: white;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease;
-}
-
-.carousel-btn:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
