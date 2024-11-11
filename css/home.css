@@ -17,29 +17,30 @@
   align-items: center;
   justify-content: space-between;
 }
-
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
 /* Hero Section */
 .hero {
-    color: #fff;
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
-    text-align: center;
-    font-size: 24px;
-    padding: 200px 20px;
-    background: linear-gradient(90deg, #0a0a23, #6e00d7, #ff5a5f, #ffd75f);
-    height: 650px;
-    background-size: 300% 300%;
-    animation: gradientAnimation 12s ease infinite;
-    position: relative;
-    z-index: 1;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+.hero-content {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 300;
+  margin-top: 20px;
+}
+.iphone16 {
+  margin: 0 auto;
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  mix-blend-mode: darken;
+  height:  auto;
 }
 
-@keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+
+
 
 /* Call to Action Button */
 .cta-button {
@@ -68,28 +69,6 @@
   font-weight: bold;
   padding-right: 1rem;
   color: #0a0a23;
-}
-
-/* Divulgação Section */
-.divulgacao {
-  margin: 0 auto;
-  padding: 40px;
-  font-size: 18px;
-  letter-spacing: 0.015em;
-  color: #3a3a3c;
-  max-width: 80%;
-  text-align: center;
-  line-height: 1.8;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(5px);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.divulgacao:hover {
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
-  transform: translateY(-3px);
 }
 
 /* Escolha Section */
