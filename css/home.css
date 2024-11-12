@@ -9,7 +9,6 @@
   box-sizing: border-box;
   font-family: 'SF Pro Display', sans-serif;
 }
-
 /* Header */
 .header {
   margin: 10px;
@@ -17,26 +16,77 @@
   align-items: center;
   justify-content: space-between;
 }
-body {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-}
-/* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background-image: url('/images/pexels-albinawhite-11059968.jpg');
+  background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    overflow: hidden;
 }
+
 .hero-content {
   font-size: 18px;
   text-align: center;
   font-weight: 300;
   margin-top: 20px;
+  display: flex;
+  right: 600%;
 }
+.descubra {
+  text-align: left;
+  margin: 8px;
+  font-size: 17px;
+  position: relative;
+  right: 60%;
+  bottom: 70%;
+}
+.descricao {
+position: relative;
+left: -60%;
+text-align: left;
+}
+
 .iphone16 {
   margin: 0 auto;
   display: block;
-  margin-top: 50px;
+  margin-top: 75px;
   margin-bottom: 100px;
   mix-blend-mode: darken;
-  height:  auto;
+  height: auto;
+  left: 50%;
+  text-shadow: 0 4px 8px rgba(7, 4, 4, 0.2);
+}
+.apple-logo {
+display: flex;
+align-items: center;
+text-shadow: #000000;
+color: #000000;
+}
+.icon-apple {
+  width: 100px;
+  height: auto;
+  margin-right: 100px;
+  position: relative;
+  bottom: 600px;
+  left: 70%;
+}
+.product-name {
+  margin: 250px;
+  left: 31%;
+  font-size: 78px;
+  font-weight: 100px;
+  position: relative;
+  bottom: 600px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+.home {
+  left: 15%;
+  font-size: 88px;
+  font-weight: 200px;
+  position: relative;
+  bottom: 600px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -46,8 +96,10 @@ body {
 .cta-button {
   background-color: #007aff;
   color: white;
-  padding: 12px 24px;
+  height: 60px;
+  padding: 8px 16px;
   border-radius: 24px;
+  bottom: 70%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -56,6 +108,9 @@ body {
   font-weight: 500;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, transform 0.3s;
+  position: relative;
+  right: 70%;
+  
 }
 
 .cta-button:hover {
@@ -71,21 +126,6 @@ body {
   color: #0a0a23;
 }
 
-/* Escolha Section */
-.escolha {
-  display: block;
-  color: #6E6E73;
-  font-size: 28px;
-  font-weight: 500;
-  margin-top: 20px;
-  letter-spacing: 0.02em;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.escolha:hover {
-  color: #0c9cee;
-  transform: scale(1.02);
-}
 
 /* Produtos */
 .produtos {                                                                               

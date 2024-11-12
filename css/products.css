@@ -43,3 +43,49 @@ margin-bottom: 20px;
   margin-top: 70px;
   margin-bottom: 10px;
 }
+.carousel-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: calc(250px * 8); /* Largura de 8 produtos para acomodar o carrossel */
+}
+
+.produtos {
+  min-width: 250px; /* Ajuste a largura para que cada item seja exibido corretamente */
+  margin: 50px;
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.carousel-btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
