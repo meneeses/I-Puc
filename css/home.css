@@ -38,8 +38,11 @@
   position: relative;
   right: 34%;
   bottom: 400px;
+  text-align: center;
 }
 .iphone16 {
+  max-width: 100%;
+  height: auto;
   margin: 0 auto;
   display: block;
   margin-top: 75px;
@@ -53,8 +56,9 @@ text-shadow: #000000;
 }
 
 .icon-apple {
-  width: 48px;
+  max-width: 100%;
   height: auto;
+  width: 48px;
   margin-right: 100px;
   position: relative;
   bottom: 420px;

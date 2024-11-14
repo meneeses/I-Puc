@@ -89,3 +89,14 @@ margin-bottom: 20px;
 .next-btn {
   right: 0;
 }
+.macbook {
+  mix-blend-mode: darken;
+}
+
+
+@media (max-width: 375px) {
+.video-fundo {
+  width: 100%;
+  height: auto;
+}
+}
