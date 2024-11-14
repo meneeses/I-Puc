@@ -1,102 +1,110 @@
+/* Configuração do vídeo de fundo */
 .video-fundo {
-border-radius: 6px;
-position: relative;
-width: 100%;
-height: 100vh;
-overflow: hidden;
-}
-.video-fundo video {
-position: absolute;
-top: 50%;
-left: 50%;
-min-width: 100%;
-min-height: 100%;
-transform: translate(-50%, -50%);
-z-index: -1;
-}
-.products {
-margin-top: 90px;
-margin-bottom: 20px;
-}
-.iphone14 {
-  margin: 23px;
-}
-.valor {
- position: relative;
- bottom: 7px;
-}
-.prijs {
-  position: relative;
-  bottom: 8px;
-}
-.price {
-  position: relative;
-  top: 20px;
-}
-.airpods {
-  max-width: 100%;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-.airpods-max {
-  max-width: 100%;
-  margin-top: 70px;
-  margin-bottom: 10px;
-}
-.carousel-container {
-  display: flex;
-  align-items: center;
+  border-radius: 6px;
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  height: 100vh;
   overflow: hidden;
-  margin: auto;
 }
 
-.carousel {
-  display: flex;
-  transition: transform 0.5s ease;
-  width: calc(250px * 8); /* Largura de 8 produtos para acomodar o carrossel */
+.video-fundo video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* Configuração da grade de produtos */
+/* Configuração da grade de produtos */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  margin-top: 20px;
+}
+
+/* Configuração para telas maiores que 1220px */
+@media (min-width: 1220px) {
+  .products {
+    grid-template-columns: repeat(4, 1fr); /* Mantém 4 produtos por linha */
+    gap: 30px;
+  }
 }
 
 .produtos {
-  min-width: 250px; /* Ajuste a largura para que cada item seja exibido corretamente */
-  margin: 50px;
   background-color: #f3f3f3;
   text-align: center;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  width: 100%; /* Define largura de 100% para ocupar todo o espaço */
+  height: 100%; /* Define altura de 100% para ocupar todo o espaço vertical */
+  margin: 0; /* Remove a centralização para ocupar toda a largura da coluna */
 }
 
-.carousel-btn {
-  background-color: #333;
+/* Resto do CSS permanece o mesmo */
+.produtos:hover {
+  transform: scale(1.05);
+}
+
+.name-produto {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin: 15px 0;
+}
+
+.produtos img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin: 15px 0;
+  display: block;
+}
+
+.price, .preco, .valor {
+  font-size: 18px;
+  color: #555;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.buy-product {
+  margin-top: 20px;
+  background: #007aff;
   color: #fff;
   border: none;
-  font-size: 24px;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 4px;
   cursor: pointer;
-  padding: 10px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
 }
 
-.prev-btn {
-  left: 0;
+.buy-product:hover {
+  background: #005bb5;
 }
 
-.next-btn {
-  right: 0;
-}
-.macbook {
-  mix-blend-mode: darken;
+/* Responsividade */
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
 }
 
-
-@media (max-width: 375px) {
-.video-fundo {
-  width: 100%;
-  height: auto;
-}
+@media (max-width: 480px) {
+  .products {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
